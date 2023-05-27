@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('includes/head') %>
+	<link rel="stylesheet" href="/styles/style.css">
+	<title>Recommend resaturants</title>
+</head>
+<body>
+	<%- include('includes/header') %>
+	<%- include('includes/aside-drawre') %>
+
+	<main>
+		<h1>Recommended restaurants</h1>
+		<% if (numberOfResturant === 0)  { %>
+          <p>Unfortunately, we have no resturant to show, maybe recommend some?</p>
+			<%} else { %>
+				<p>Find your next favorite restaurants with help of our other users!</p>
+        <p>We found <%= numberOfResturant %> resturant.</p>
+		<ul id="resturant-list">
+			<% for (const resturant of resturants) { %>
+				<%- include('includes/resturant/resturant-item',{resturant: resturant }) %>
+			<% } %>
+		</ul>
+				<% }%>		
+</main>
+</body>
+</html>

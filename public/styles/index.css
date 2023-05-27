@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Jost:wght@600&family=Kenia&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+body {
+	background-color: rgb(247, 204, 163);
+	font-family:'Dancing Script', kenia;
+}
+
+ main {
+	width: 95%;
+	max-width: 50rem;
+	margin: 3rem auto;
+	text-align: center;
+} 
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+#logo {
+	font-size: 2rem;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(251, 167, 88);
+	border-radius: 50%;
+	margin: 0.5rem 2.5rem;
+	padding: 0.5rem 1.5rem;
+}
+
+header nav ul {
+	display: flex;
+}
+
+header nav ul li {
+	list-style: none;
+	padding: 1rem 1.5rem;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	color: rgb(55, 29, 4);
+	font-size: 1.3rem;
+}
+
+main {
+	text-align: center;
+}
+
+main h1 {
+	font-size: 3rem;
+	margin-top: 5rem;
+	color: rgb(100, 77, 56);
+}
+
+main p {
+	font-size: 2rem;
+	color: rgb(146, 101, 59);
+	padding-top: 1rem;
+}
+
+#main-content ul {
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+}
+
+#main-content li {
+	list-style: none;
+	margin-left: 2rem;
+	background-color: rgb(28, 17, 7);
+	padding: 4rem;
+	border-radius: 7px;
+	box-shadow: 2px 4px 4px rgb(3, 1, 0);
+}
+#main-content li:hover {
+	background-color: rgb(184, 107, 36);
+}
+
+#main-content a {
+	text-decoration: none;
+	color: rgb(200, 147, 98);
+	font-size: 1.5rem;
+}
+
+/* humborger button */
+#mobile-drawer {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(28, 17, 7);
+	position: fixed;
+	display: none;
+}
+
+#mobile-drawer.open {
+	display: block;
+	position: fixed;
+	top: 5rem;
+	left:0;
+	width: 100%;
+	height: calc(100vh - 5rem);
+	background-color: rgb(200, 147, 98);
+}
+
+button {
+	background-color:  rgb(247, 204, 163);
+}
+ #drawer-btn {	
+	width: 2rem;
+	height:2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border: none;
+	margin: 1rem 2rem;
+	display: none;
+}
+
+
+#drawer-btn span {
+	width: 2rem;
+	height: 2px;
+	background-color: white;	
+}
+
+aside ul {
+	list-style: none;
+}
+
+aside ul li {
+	margin: 6rem auto;
+	text-align: center;
+}
+
+aside ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+	/* #main-content ul {
+		display: flex;
+		flex-direction: column;
+	}
+	#main-content li {
+		margin: 1rem auto;
+	} */
+
+	header nav ul {
+		display: none;
+	}
+
+	#mobile-drawer {
+		display: block;
+	}
+
+	#drawer-btn {
+		display: block;
+	}
+
+  header ul li a {
+	display: block;
+  }
+
+  #drawer-btn span {
+	display: block;
+	width: 2rem;
+	height: 2px;
+	background-color: white;	
+  }
+
+
+
+}
